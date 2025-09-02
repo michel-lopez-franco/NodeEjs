@@ -1,1 +1,0 @@
-node --watch app.js 
