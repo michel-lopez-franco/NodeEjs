@@ -22,12 +22,18 @@ app.post("/", (req, res) => {
 
 app.put("/user", (req, res) => {
   const data = req.body;
-  res.send(`Got a PUT request at /user a=${data}`);
+  res.send(`Got a PUT request at /user data=${JSON.stringify(data)}`);
   
 });
 
 app.delete("/user", (req, res) => {
   res.send("Got a DELETE request at /user");
+});
+
+app.delete("/user/:id", (req, res) => {
+  const userId = req.params.id;
+  // Aquí podrías eliminar el usuario de una base de datos o arreglo
+  res.send(`Usuario con id=${userId} eliminado`);
 });
 
 // Iniciar el servidor
