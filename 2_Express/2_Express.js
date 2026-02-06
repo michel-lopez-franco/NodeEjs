@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // Definir el puerto
-const PORT = 3000;
+const PORT = 3001;
 
 // Crear una ruta para la página principal
 app.get('/', (req, res) => {
